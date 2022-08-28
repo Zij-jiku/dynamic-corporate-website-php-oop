@@ -16,7 +16,7 @@
 
     <div class="container">
         <!-- Login Form Start -->
-        <div class="row justify-content-center h-100vh" id="login-form-box">
+        <div class="row justify-content-center h-100vh" id="login-form-box" style="display: none;">
             <div class="col-lg-12 my-auto">
                 <div class="card-group">
                     <div class="card p-4">
@@ -68,46 +68,51 @@
 
         <!-- Load from Ajax -->
         <!-- Register Form Start -->
-        <div class="row justify-content-center h-100vh" id="register-form-box" style="display: none;">
+        <div class="row justify-content-center h-100vh" id="register-form-box" style="display: block;">
             <div class="col-lg-12 my-auto">
                 <div class="card-group">
                     <div class="card p-4">
                         <h2 class="text-center text-primary font-weight-bold">Register Form</h2>
                         <hr class="my-3">
 
-                        <form class="px-3" action="" method="post" id="register-form">
+                        <form class="px-3" action="#" method="post" id="register-form">
 
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="name">
+                                <span class="input-group-text">
                                     <i class="fas fa-user"></i>
                                 </span>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+                                <div class="invalid-feedback">This name field is required!</div>
                             </div>
 
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="email">
+                                <span class="input-group-text">
                                     <i class="fas fa-envelope"></i>
                                 </span>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                                <input type="email" class="form-control" name="email" id="userEmail" placeholder="Enter your email">
+                                <div class="invalid-feedback">This email field is required!</div>
                             </div>
 
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="password">
+                                <span class="input-group-text">
                                     <i class="fas fa-key"></i>
                                 </span>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                                <input type="password" class="form-control" name="r_password" id="r_password" placeholder="Enter your password">
+                                <div class="invalid-feedback">Password field is required & password dosent'match
+                                </div>
                             </div>
 
                             <div class="input-group mb-3">
-                                <span class="input-group-text" id="cpassword">
+                                <span class="input-group-text">
                                     <i class="fas fa-key"></i>
                                 </span>
-                                <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Enter your password">
+                                <input type="password" class="form-control" name="cpassword" id="c_password" placeholder="Enter your password">
+                                <div class="invalid-feedback">Confirm Password field is required</div>
                             </div>
 
 
                             <div class="form-group">
-                                <input type="submit" value="Sign Up" class="btn btn-block btn-primary" >
+                                <input type="submit" value="Register" class="btn btn-block btn-primary" id="registerUser">
                             </div>
                         </form>
                     </div>
